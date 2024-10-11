@@ -1,5 +1,8 @@
 # UCE Génie Logiciel Avancé : Techniques de tests
 
+Nom : KARACA Melih
+classe : ILSEN groupe 1
+
 ## Introduction
 
 Vous allez à travers ces projet mettre en application une partie des aspects évoqués en cours vis à vis des techniques de tests.  
