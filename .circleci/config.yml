@@ -20,7 +20,8 @@ jobs:
       - checkout
       - run :
           name : "run test"
-          command : mvn test
+          command : |
+            mvn test
 
   # Job for uploading to Codecov
   codecov-upload:
