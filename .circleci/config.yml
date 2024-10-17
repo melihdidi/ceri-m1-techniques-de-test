@@ -26,7 +26,7 @@ jobs:
   # Job for uploading to Codecov
   codecov-upload:
     docker:
-      - image: cimg/base:current
+      - image: cimg/openjdk:17.0
     steps:
       - checkout
       - run:
