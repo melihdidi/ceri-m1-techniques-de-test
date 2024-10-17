@@ -29,3 +29,14 @@ workflows:
     # Inside the workflow, you define the jobs you want to run.
     jobs:
       - say-hello
+
+orbs:
+  codecov: codecov/codecov@4.0.1
+workflows:
+  upload-to-codecov:
+    jobs:
+      - checkout 
+      - codecov/upload
+      
+env:
+  CODECOV_TOKEN: 75ca8560-c635-4c2a-bb2f-316a0f546dd0
