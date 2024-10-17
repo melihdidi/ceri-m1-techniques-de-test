@@ -1,0 +1,7 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+ceri-m1-techniques-de-test2,fr.univavignon.pokedex.api,Team,21,0,0,0,4,0,1,0,1,0
+ceri-m1-techniques-de-test2,fr.univavignon.pokedex.api,PokedexException,0,4,0,0,0,2,0,1,0,1
+ceri-m1-techniques-de-test2,fr.univavignon.pokedex.api,PokemonTrainer,21,0,0,0,8,0,4,0,4,0
+ceri-m1-techniques-de-test2,fr.univavignon.pokedex.api,PokemonComparators,6,35,0,0,1,7,1,2,1,2
+ceri-m1-techniques-de-test2,fr.univavignon.pokedex.api,PokemonMetadata,15,18,0,0,5,7,5,1,5,1
+ceri-m1-techniques-de-test2,fr.univavignon.pokedex.api,Pokemon,15,23,0,0,5,7,5,1,5,1
