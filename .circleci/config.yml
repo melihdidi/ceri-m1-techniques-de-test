@@ -15,7 +15,7 @@ jobs:
   #lancement des test
   run-test:
     docker:
-      -image: cimg/base:current
+      - image: cimg/base:current
     steps:
       - checkout
       - run :
