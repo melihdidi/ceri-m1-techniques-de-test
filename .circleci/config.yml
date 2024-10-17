@@ -19,8 +19,8 @@ jobs:
     steps:
       - checkout
       - run :
-        name : "run test"
-        command : mvn test
+          name : "run test"
+          command : mvn test
 
   # Job for uploading to Codecov
   codecov-upload:
