@@ -39,4 +39,8 @@ workflows:
       - codecov/upload
       
 env:
+<<<<<<< HEAD
   CODECOV_TOKEN: 75ca8560-c635-4c2a-bb2f-316a0f546dd0
+=======
+  CODECOV_TOKEN: 75ca8560-c635-4c2a-bb2f-316a0f546dd0
+>>>>>>> 1e5e77cb0cd5fa2da0640877736e5a318e41cbc1
