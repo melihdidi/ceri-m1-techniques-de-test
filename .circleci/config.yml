@@ -12,6 +12,16 @@ jobs:
           name: "Say hello"
           command: "echo Hello, World!"
 
+  #lancement des test
+  run-test:
+    docker:
+      -image: cimg/base:current
+    step:
+      - checkout
+      - run :
+        name : "run test"
+        command : "mvn clean test jacoco:report"
+
   # Job for uploading to Codecov
   codecov-upload:
     docker:
@@ -22,6 +32,7 @@ jobs:
           name: "Upload coverage to Codecov"
           command: |
             bash <(curl -s https://codecov.io/bash) -t $CODECOV_TOKEN
+  
 
 # Orchestrate jobs using workflows
 workflows:
@@ -29,6 +40,7 @@ workflows:
   say-hello-workflow:
     jobs:
       - say-hello
+      - run-test
       - codecov-upload
 
 # Orbs
