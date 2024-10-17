@@ -15,7 +15,7 @@ jobs:
   #lancement des test
   run-test:
     docker:
-      - image: cimg/base:current
+      - image: cimg/openjdk:17.0
     steps:
       - checkout
       - run :
