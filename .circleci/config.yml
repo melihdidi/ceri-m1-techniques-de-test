@@ -16,11 +16,11 @@ jobs:
   run-test:
     docker:
       -image: cimg/base:current
-    step:
+    steps:
       - checkout
       - run :
         name : "run test"
-        command : "mvn clean test jacoco:report"
+        command : mvn test
 
   # Job for uploading to Codecov
   codecov-upload:
