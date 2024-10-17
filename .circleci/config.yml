@@ -20,8 +20,7 @@ jobs:
       - checkout
       - run:
           name: "Run tests and generate coverage report"
-          command: |
-            mvn clean test jacoco:report
+          command: "mvn clean test jacoco:report"
       - run:
           name: "Upload coverage to Codecov"
           command: |
