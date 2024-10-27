@@ -32,7 +32,7 @@ jobs:
       - run:
           name: "Upload coverage to Codecov"
           command: |
-            bash <(curl -s https://codecov.io/bash) -t $CODECOV_TOKEN
+            bash <(curl -s https://codecov.io/bash) -t $CODECOV_TOKEN -f target/jacoco.exec
   
 
 # Orchestrate jobs using workflows
