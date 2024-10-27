@@ -34,7 +34,8 @@ jobs:
           command: |
             bash <(curl -s https://codecov.io/bash) -t $CODECOV_TOKEN -f target/jacoco.exec
   
-    test:
+  #test de variable token
+  test:
     docker:
       - image: cimg/openjdk:17.0
     steps:
