@@ -34,7 +34,15 @@ jobs:
           command: |
             bash <(curl -s https://codecov.io/bash) -t $CODECOV_TOKEN -f target/jacoco.exec
   
-
+    test:
+    docker:
+      - image: cimg/openjdk:17.0
+    steps:
+      - checkout
+      - run :
+          name : "test"
+          command : "echo $CODECOV_TOKEN"
+            
 # Orchestrate jobs using workflows
 workflows:
   version: 2
@@ -42,6 +50,7 @@ workflows:
     jobs:
       - say-hello
       - run-test
+      - test
       - codecov-upload:
           requires:
             - run-test
