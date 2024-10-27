@@ -1,3 +1,15 @@
+## NOM : KARACA Melih
+## GROUPE : ILSEN-alt-grp-1
+## BADGES
+
+<a href="https://dl.circleci.com/status-badge/redirect/gh/melihdidi/ceri-m1-techniques-de-test/tree/master">
+ <img src="https://dl.circleci.com/status-badge/img/gh/melihdidi/ceri-m1-techniques-de-test/tree/master.svg?style=svg">
+</a>
+
+<a href="https://codecov.io/gh/melihdidi/ceri-m1-techniques-de-test" > 
+ <img src="https://codecov.io/gh/melihdidi/ceri-m1-techniques-de-test/graph/badge.svg?token=ZAEI9D1AR8"/> 
+</a>
+
 # UCE Génie Logiciel Avancé : Techniques de tests
 
 ## Introduction
