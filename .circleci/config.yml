@@ -12,16 +12,27 @@ jobs:
           name: "Say hello"
           command: "echo Hello, World!"
 
-  #lancement des test
+  # Lancement des tests
   run-test:
     docker:
       - image: cimg/openjdk:17.0
     steps:
       - checkout
-      - run :
-          name : "run test"
-          command : |
+      - run:
+          name: "Run tests"
+          command: |
             mvn test
+
+  # Lancement de Checkstyle
+  run-checkstyle:
+    docker:
+      - image: cimg/openjdk:17.0
+    steps:
+      - checkout
+      - run:
+          name: "Run Checkstyle"
+          command: |
+            mvn checkstyle:check
 
   # Job for uploading to Codecov
   codecov-upload:
@@ -34,15 +45,15 @@ jobs:
           command: |
             bash <(curl -s https://codecov.io/bash) -t 75ca8560-c635-4c2a-bb2f-316a0f546dd0 -f target/jacoco.exec
   
-  #test de variable token
+  # Test de variable token
   test:
     docker:
       - image: cimg/openjdk:17.0
     steps:
       - checkout
-      - run :
-          name : "test"
-          command : "echo $CODECOV_TOKEN"
+      - run:
+          name: "Test environment variable"
+          command: "echo $CODECOV_TOKEN"
             
 # Orchestrate jobs using workflows
 workflows:
@@ -51,6 +62,9 @@ workflows:
     jobs:
       - say-hello
       - run-test
+      - run-checkstyle:
+          requires:
+            - run-test
       - test
       - codecov-upload:
           requires:
