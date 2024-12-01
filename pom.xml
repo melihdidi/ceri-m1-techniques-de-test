@@ -130,12 +130,9 @@
 	    <artifactId>maven-checkstyle-plugin</artifactId>
 	    <version>3.2.2</version>
 	    <configuration>
-	        <!-- Utilisez un fichier de configuration Checkstyle personnalisé -->
 	        <configLocation>checkstyle.xml</configLocation>
-	        <encoding>${project.build.sourceEncoding}</encoding>
-	        <consoleOutput>true</consoleOutput>
-	        <failsOnError>true</failsOnError>
-	        <linkXRef>false</linkXRef>
+	        <outputFile>${project.build.directory}/checkstyle-result.xml</outputFile>
+	        <outputFormat>xml</outputFormat>
 	    </configuration>
 	    <executions>
 	        <execution>
@@ -146,6 +143,36 @@
 	        </execution>
 	    </executions>
 	</plugin>
+
+	<!-- Ajout de Maven Site Plugin pour générer la documentation du projet -->
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-site-plugin</artifactId>
+      <version>3.12.1</version>
+      <executions>
+        <execution>
+          <id>site</id>
+          <phase>site</phase>
+          <goals>
+            <goal>site</goal>
+          </goals>
+        </execution>
+      </executions>
+    </plugin>
+
+    <!-- Ajout de Maven Javadoc Plugin pour générer les Javadocs -->
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-javadoc-plugin</artifactId>
+      <version>3.5.0</version>
+      <executions>
+        <execution>
+          <goals>
+            <goal>javadoc</goal>
+          </goals>
+        </execution>
+      </executions>
+    </plugin>
 
 
 <!-- 
