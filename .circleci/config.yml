@@ -33,7 +33,24 @@ jobs:
           name: "Run Checkstyle"
           command: |
             mvn checkstyle:check
+      - store_artifacts:
+          path: target/checkstyle-result.xml
+          destination: checkstyle-report
 
+  # Génération de la documentation avec Maven Site
+  generate-docs:
+    docker:
+      - image: cimg/openjdk:17.0
+    steps:
+      - checkout
+      - run:
+          name: "Generate Maven site"
+          command: |
+            mvn site
+      - store_artifacts:
+          path: target/site/
+          destination: site-docs
+          
   # Job for uploading to Codecov
   codecov-upload:
     docker:
@@ -63,6 +80,9 @@ workflows:
       - say-hello
       - run-test
       - run-checkstyle:
+          requires:
+            - run-test
+      - generate-docs:
           requires:
             - run-test
       - test
