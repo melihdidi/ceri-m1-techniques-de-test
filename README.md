@@ -2,13 +2,13 @@
 ## GROUPE : ILSEN-alt-grp-1
 ## BADGES
 
-<a href="https://dl.circleci.com/status-badge/redirect/gh/melihdidi/ceri-m1-techniques-de-test/tree/master">
- <img src="https://dl.circleci.com/status-badge/img/gh/melihdidi/ceri-m1-techniques-de-test/tree/master.svg?style=svg">
-</a>
+![CircleCI Status](https://img.shields.io/circleci/build/gh/melihdidi/ceri-m1-techniques-de-test/master.svg?style=flat-square)
 
-<a href="https://codecov.io/gh/melihdidi/ceri-m1-techniques-de-test" > 
- <img src="https://codecov.io/gh/melihdidi/ceri-m1-techniques-de-test/graph/badge.svg?token=ZAEI9D1AR8"/> 
-</a>
+
+![Codecov Coverage](https://img.shields.io/codecov/c/github/melihdidi/ceri-m1-techniques-de-test?token=ZAEI9D1AR8)
+
+
+![Checkstyle Status](https://img.shields.io/badge/Checkstyle%20Errors-0-red)
 
 # UCE Génie Logiciel Avancé : Techniques de tests
 

@@ -1,0 +1,16 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------< fr.univavignon.pokedex.api:ceri-m1-techniques-de-test2 >-------
+[INFO] Building ceri-m1-techniques-de-test2 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] Parameter 'outputFormat' is unknown for plugin 'maven-checkstyle-plugin:3.2.2:check (default-cli)'
+[INFO] 
+[INFO] --- checkstyle:3.2.2:check (default-cli) @ ceri-m1-techniques-de-test2 ---
+[INFO] You have 0 Checkstyle violations.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.250 s
+[INFO] Finished at: 2024-12-10T16:51:34+01:00
+[INFO] ------------------------------------------------------------------------
