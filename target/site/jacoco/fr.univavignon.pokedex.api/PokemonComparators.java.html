@@ -7,16 +7,16 @@ import java.util.Comparator;
  * 
  * @author fv
  */
-<span class="fc" id="L10">public enum PokemonComparators implements Comparator&lt;Pokemon&gt; {</span>
+<span class="nc" id="L10">public enum PokemonComparators implements Comparator&lt;Pokemon&gt; {</span>
 
-	/** Comparator using Pokemon name. **/
-<span class="fc" id="L13">	NAME(Comparator.comparing(Pokemon::getName)),</span>
+<span class="nc" id="L12">	/** Comparator using Pokemon name. **/</span>
+<span class="nc" id="L13">	NAME(Comparator.comparing(Pokemon::getName)),</span>
 
-	/** Comparator using Pokemon index. **/
-<span class="fc" id="L16">	INDEX(Comparator.comparing(Pokemon::getIndex)),</span>
+<span class="nc" id="L15">	/** Comparator using Pokemon index. **/</span>
+<span class="nc" id="L16">	INDEX(Comparator.comparing(Pokemon::getIndex)),</span>
 	
-	/** Comparator using Pokemon combat point. **/
-<span class="fc" id="L19">	CP(Comparator.comparing(Pokemon::getCp))</span>
+<span class="nc" id="L18">	/** Comparator using Pokemon combat point. **/</span>
+<span class="nc" id="L19">	CP(Comparator.comparing(Pokemon::getCp))</span>
 	
 	;
 	
@@ -28,9 +28,9 @@ import java.util.Comparator;
 	 * 
 	 * @param delegate Delegate comparator instance.
 	 */
-<span class="fc" id="L31">	private PokemonComparators(final Comparator&lt;Pokemon&gt; delegate) {</span>
-<span class="fc" id="L32">		this.delegate = delegate;</span>
-<span class="fc" id="L33">	}</span>
+<span class="nc" id="L31">	private PokemonComparators(final Comparator&lt;Pokemon&gt; delegate) {</span>
+<span class="nc" id="L32">		this.delegate = delegate;</span>
+<span class="nc" id="L33">	}</span>
 
 	/** {@inheritDoc} **/
 	@Override
