@@ -60,7 +60,7 @@ jobs:
       - run:
           name: "Upload coverage to Codecov"
           command: |
-            bash <(curl -s https://codecov.io/bash) -t ac004112-8b49-47f6-bcbe-0a5fcecda6c3 -f target/jacoco.exec
+            bash <(curl -s https://codecov.io/bash) -t 5233332d-f97c-4608-adc1-183988ce0ed8 -f target/jacoco.exec
   
   # Test de variable token
   test:
