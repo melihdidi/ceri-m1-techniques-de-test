@@ -120,10 +120,18 @@
 	            <goals>
 	                <goal>report</goal>
 	            </goals>
+	            <configuration>
+	                <outputDirectory>${project.build.directory}/jacoco-report</outputDirectory>
+	                <reports>
+	                    <html/>
+	                    <xml/>
+	                    <csv/>
+	                </reports>
+	            </configuration>
 	        </execution>
 	    </executions>
 	</plugin>
-	
+
 	<!-- checkstyle Plugin -->
 	<plugin>
 	    <groupId>org.apache.maven.plugins</groupId>
