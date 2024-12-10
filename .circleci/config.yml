@@ -58,11 +58,9 @@ jobs:
     steps:
       - checkout
       - run:
-          name: "Run tests"
-          command: mvn test
-      - codecov/upload:
-          token: $CODECOV_TOKEN
-          file: target/jacoco.exec
+          name: "Upload coverage to Codecov"
+          command: |
+            bash <(curl -s https://codecov.io/bash) -t 75ca8560-c635-4c2a-bb2f-316a0f546dd0 -f target/jacoco.exec
   
   # Test de variable token
   test:
